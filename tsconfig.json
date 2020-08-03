@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        // Enable strictest settings like strictNullChecks & noImplicitAny.
+        "strict": true,
+        // Import non-ES modules as default imports.
+        "esModuleInterop": true,
+        // Transpile jsx
+        "jsx": "react",
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "baseUrl": "src/",
+        // Prevents Linux/macOs inconsistencies
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist/",
+    }
+}
