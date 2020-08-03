@@ -47,11 +47,11 @@ interface Props {
 }
 
 const styles = (
-    image: Image,
+    role: Role,
     format: Format,
     supportsDarkMode: boolean,
 ): SerializedStyles => {
-    switch (image.role) {
+    switch (role) {
         case Role.Thumbnail:
             return css`color: ${neutral[60]};`;
         default:
@@ -59,7 +59,6 @@ const styles = (
                 background-color: ${backgroundColour(format)};
                 color: ${neutral[60]};
                 ${darkModeCss(supportsDarkMode)`background-color: ${neutral[20]};`}
-                height: ${100 * image.height / image.width}%;
             `;
     }   
 }
@@ -80,7 +79,7 @@ const Img: FC<Props> = ({ image, sizes, className, format, supportsDarkMode, lig
             alt={withDefault('')(image.alt)}
             className={getLightboxClassName(image.width, lightboxClassName)}
             css={[
-                styles(image, format, supportsDarkMode),
+                styles(image.role, format, supportsDarkMode),
                 withDefault<SerializedStyles | undefined>(undefined)(className),
             ]}
             data-ratio={image.height / image.width}
