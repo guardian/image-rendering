@@ -50,7 +50,7 @@ const Placeholder: FC = () =>
             rawCaptionHtml: none,
             role: Role.Standard,
         }}
-        sizes="80vw"
+        sizes="40vw"
         className={some(css`width: 40vw; height: 30vw; display: block;`)}
         format={{
             design: Design.Article,
