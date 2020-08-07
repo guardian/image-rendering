@@ -1,7 +1,8 @@
+/** @jsx jsx */
 // ----- Imports ----- //
 
-import React, { FC } from 'react';
-import { SerializedStyles, css } from '@emotion/core';
+import { FC } from 'react';
+import { SerializedStyles, css, jsx } from '@emotion/core';
 import { Option, OptionKind, withDefault } from '@guardian/types/option';
 import { Format, Design } from '@guardian/types/Format';
 import { neutral } from '@guardian/src-foundations/palette';
