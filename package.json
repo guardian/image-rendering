@@ -14,14 +14,21 @@
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@storybook/react": "^5.3.19",
+    "@types/jest": "^26.0.9",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.43",
+    "@types/react-test-renderer": "^16.9.3",
     "babel-loader": "^8.1.0",
+    "jest": "^26.2.2",
+    "jest-emotion": "^10.0.32",
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^26.1.4",
     "ts-loader": "^8.0.2"
   },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "storybook": "start-storybook -p 8181 --ci"
   },
   "repository": {
@@ -33,5 +40,12 @@
   "bugs": {
     "url": "https://github.com/guardian/image-rendering/issues"
   },
-  "homepage": "https://github.com/guardian/image-rendering#readme"
+  "homepage": "https://github.com/guardian/image-rendering#readme",
+  "jest": {
+    "preset": "ts-jest/presets/js-with-ts",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@guardian/src-foundations|@guardian/types)/)"
+    ],
+    "snapshotSerializers": ["jest-emotion"]
+  }
 }

@@ -12,5 +12,6 @@
         // Prevents Linux/macOs inconsistencies
         "forceConsistentCasingInFileNames": true,
         "outDir": "dist/",
+        "allowJs": true,
     }
 }
