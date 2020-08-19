@@ -9,6 +9,7 @@ import { neutral } from '@guardian/src-foundations/palette';
 
 import { Image, Role } from 'image';
 import { darkModeCss } from 'lib';
+import { Sizes, sizesAttribute, styles as sizeStyles } from 'sizes';
 
 
 // ----- Functions ----- //
@@ -40,39 +41,52 @@ const getLightboxClassName = (
 
 interface Props {
     image: Image;
-    sizes: string;
+    sizes: Sizes;
     className: Option<SerializedStyles>;
     format: Format;
     supportsDarkMode: boolean;
     lightboxClassName: Option<string>;
 }
 
-const styles = (
-    role: Role,
+const styles = (format: Format, supportsDarkMode: boolean): SerializedStyles => css`
+    background-color: ${backgroundColour(format)};
+    color: ${neutral[60]};
+    display: block;
+
+    ${darkModeCss(supportsDarkMode)`
+        background-color: ${neutral[20]};
+    `}
+`;
+
+const thumbnailStyles = css`
+    color: ${neutral[60]};
+`;
+
+const getStyles = (
+    image: Image,
     format: Format,
     supportsDarkMode: boolean,
+    sizes: Sizes,
 ): SerializedStyles => {
-    switch (role) {
+    const dimensions = sizeStyles(sizes, image.width, image.height);
+
+    switch (image.role) {
         case Role.Thumbnail:
-            return css`color: ${neutral[60]};`;
+            return css(dimensions, thumbnailStyles);
         default:
-            return css`
-                background-color: ${backgroundColour(format)};
-                color: ${neutral[60]};
-                ${darkModeCss(supportsDarkMode)`background-color: ${neutral[20]};`}
-            `;
+            return css(dimensions, styles(format, supportsDarkMode));
     }   
 }
 
 const Img: FC<Props> = ({ image, sizes, className, format, supportsDarkMode, lightboxClassName }) =>
     <picture>
         <source
-            sizes={sizes}
+            sizes={sizesAttribute(sizes)}
             srcSet={image.dpr2Srcset}
             media="(-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)"
         />
         <source
-            sizes={sizes}
+            sizes={sizesAttribute(sizes)}
             srcSet={image.srcset}
         />
         <img
@@ -80,7 +94,7 @@ const Img: FC<Props> = ({ image, sizes, className, format, supportsDarkMode, lig
             alt={withDefault('')(image.alt)}
             className={getLightboxClassName(image.width, lightboxClassName)}
             css={[
-                styles(image.role, format, supportsDarkMode),
+                getStyles(image, format, supportsDarkMode, sizes),
                 withDefault<SerializedStyles | undefined>(undefined)(className),
             ]}
             data-ratio={image.height / image.width}

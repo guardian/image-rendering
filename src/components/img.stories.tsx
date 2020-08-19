@@ -1,7 +1,6 @@
 // ----- Imports ----- //
 
 import React, { FC } from 'react';
-import { css } from '@emotion/core';
 import { none, some } from '@guardian/types/option';
 import { Design, Display, Pillar } from '@guardian/types/Format';
 
@@ -24,7 +23,7 @@ const image: Image = {
     role: Role.Standard,
 };
 
-const sizes = '40vw';
+const sizes = { mediaQueries: [], default: '40vw' };
 
 
 // ----- Stories ----- //
@@ -52,11 +51,7 @@ const Placeholder: FC = () =>
             dpr2Srcset: '',
         }}
         sizes={sizes}
-        className={some(css`
-            width: ${sizes};
-            height: calc(${sizes} * ${image.height / image.width});
-            display: block;
-        `)}
+        className={none}
         format={{
             design: Design.Article,
             display: Display.Standard,
