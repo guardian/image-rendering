@@ -1,25 +1,18 @@
 // ----- Imports ----- //
 
 import React, { FC } from 'react';
-import { none } from '@guardian/types/option';
-import { Design, Display, Pillar } from '@guardian/types/Format';
+import { none, some } from '@guardian/types/option';
+import { Display, Design, Pillar } from '@guardian/types/Format';
 
-import Img from './img';
 import { image } from 'fixtures/image';
-
-
-// ----- Setup ----- //
-
-const sizes = { mediaQueries: [], default: '40vw' };
+import BodyImage from './bodyImage';
 
 
 // ----- Stories ----- //
 
 const Default: FC = () =>
-    <Img
+    <BodyImage
         image={image}
-        sizes={sizes}
-        className={none}
         format={{
             design: Design.Article,
             display: Display.Standard,
@@ -27,18 +20,12 @@ const Default: FC = () =>
         }}
         supportsDarkMode={true}
         lightboxClassName={none}
+        caption={some('Age of the train ... a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images')}
     />
 
-const Placeholder: FC = () =>
-    <Img
-        image={{
-            ...image,
-            src: '',
-            srcset: '',
-            dpr2Srcset: '',
-        }}
-        sizes={sizes}
-        className={none}
+const NoCaption: FC = () =>
+    <BodyImage
+        image={image}
         format={{
             design: Design.Article,
             display: Display.Standard,
@@ -46,17 +33,18 @@ const Placeholder: FC = () =>
         }}
         supportsDarkMode={true}
         lightboxClassName={none}
+        caption={none}
     />
 
 
 // ----- Exports ----- //
 
 export default {
-    component: Img,
-    title: 'Img',
+    component: BodyImage,
+    title: 'BodyImage',
 }
 
 export {
     Default,
-    Placeholder,
-};
+    NoCaption,
+}
