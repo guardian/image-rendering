@@ -10,7 +10,7 @@ import { textSans } from '@guardian/src-foundations/typography';
 import { SerializedStyles, css, jsx } from '@emotion/core';
 
 import { darkModeCss } from 'lib';
-import { svg } from 'editorialPalette';
+import { fill } from 'editorialPalette';
 
 
 // ----- Sub-Components ----- //
@@ -21,12 +21,12 @@ interface TriangleProps {
 }
 
 const triangleStyles = (format: Format, supportsDarkMode: boolean): SerializedStyles => css`
-    fill: ${svg.primary(format)};
+    fill: ${fill.iconPrimary(format)};
     height: 0.8em;
     padding-right: ${remSpace[1]};
 
     ${darkModeCss(supportsDarkMode)`
-        fill: ${svg.primaryInverse(format)};
+        fill: ${fill.iconPrimaryInverse(format)};
     `}
 `;
 

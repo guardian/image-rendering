@@ -17,7 +17,7 @@ type Colour = string;
 
 // ----- Functions ----- //
 
-const svgPrimary = (format: Format): Colour => {
+const fillIconPrimary = (format: Format): Colour => {
     switch (format.pillar) {
         case Pillar.Opinion:
             return opinion[400];
@@ -33,7 +33,7 @@ const svgPrimary = (format: Format): Colour => {
     }
 }
 
-const svgPrimaryInverse = (format: Format): Colour => {
+const fillIconPrimaryInverse = (format: Format): Colour => {
     switch (format.pillar) {
         case Pillar.Opinion:
             return opinion[500];
@@ -52,14 +52,14 @@ const svgPrimaryInverse = (format: Format): Colour => {
 
 // ----- API ----- //
 
-const svg = {
-    primary: svgPrimary,
-    primaryInverse: svgPrimaryInverse,
+const fill = {
+    iconPrimary: fillIconPrimary,
+    iconPrimaryInverse: fillIconPrimaryInverse,
 };
 
 
 // ----- Exports ----- //
 
 export {
-    svg,
+    fill,
 }
