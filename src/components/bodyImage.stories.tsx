@@ -20,7 +20,7 @@ const Default: FC = () =>
         }}
         supportsDarkMode={true}
         lightboxClassName={none}
-        caption={some('Age of the train ... a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images')}
+        caption={some('Age of the train … a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images')}
     />
 
 const NoCaption: FC = () =>

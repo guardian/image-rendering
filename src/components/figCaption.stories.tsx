@@ -18,7 +18,7 @@ const Default: FC = () =>
         }}
         supportsDarkMode={true}
     >
-        {some('Age of the train ... a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images')}
+        {some('Age of the train … a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images')}
     </FigCaption>
 
 
