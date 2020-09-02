@@ -6,6 +6,7 @@
         "esModuleInterop": true,
         // Transpile jsx
         "jsx": "react",
+        "jsxFactory": "jsx",
         "noUnusedLocals": true,
         "noUnusedParameters": false,
         "baseUrl": "src/",
