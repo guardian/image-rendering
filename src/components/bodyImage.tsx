@@ -1,4 +1,3 @@
-/** @jsx jsx */
 // ----- Imports ----- //
 
 import { FC, ReactNode } from 'react';
