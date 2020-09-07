@@ -4,7 +4,7 @@
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
   "main": "index.ts",
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^10.0.35",
     "@guardian/src-foundations": "^2.3.0",
     "@guardian/types": "github:guardian/types#semver:^0.4.3",
     "react": "^16.13.1",
