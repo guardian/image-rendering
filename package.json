@@ -5,7 +5,7 @@
   "main": "index.ts",
   "dependencies": {
     "@emotion/core": "^10.0.28",
-    "@guardian/src-foundations": "^2.0.0",
+    "@guardian/src-foundations": "^2.3.0",
     "@guardian/types": "github:guardian/types#semver:^0.4.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
