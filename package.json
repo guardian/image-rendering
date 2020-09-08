@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --updateSnapshot",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 8181 --ci"
   },
