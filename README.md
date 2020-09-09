@@ -1,2 +1,3 @@
 # image-rendering
-Handles parsing image from CAPI and rendering them in the *-rendering projects
+
+Handles parsing images from CAPI and rendering them in the `*-rendering` projects
