@@ -6,7 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@guardian/src-foundations": "^2.3.0",
-    "@guardian/types": "github:guardian/types#semver:^0.4.3",
+    "@guardian/types": "github:guardian/types#semver:^0.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^4.0.2"
