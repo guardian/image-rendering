@@ -23,7 +23,7 @@
     "jest-emotion": "^10.0.32",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.3.0",
-    "ts-loader": "^8.0.2"
+    "ts-loader": "^8.0.3"
   },
   "scripts": {
     "build": "tsc",
