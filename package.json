@@ -46,6 +46,7 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(@guardian/src-foundations|@guardian/types)/)"
     ],
-    "snapshotSerializers": ["jest-emotion"]
+    "snapshotSerializers": ["jest-emotion"],
+    "testPathIgnorePatterns": ["dist"]
   }
 }
