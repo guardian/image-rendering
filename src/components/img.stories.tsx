@@ -1,7 +1,6 @@
 // ----- Imports ----- //
 
-import { FC } from 'react';
-import { jsx } from '@emotion/core';
+import React, { FC } from 'react';
 import { none } from '@guardian/types/option';
 import { Design, Display, Pillar } from '@guardian/types/Format';
 

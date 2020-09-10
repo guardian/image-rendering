@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
+        "target": "es2020",
         // Enable strictest settings like strictNullChecks & noImplicitAny.
         "strict": true,
         // Import non-ES modules as default imports.
         "esModuleInterop": true,
-        // Transpile jsx
-        "jsx": "react",
-        "jsxFactory": "jsx",
+        "moduleResolution": "node",
+        // Don't transpile jsx - leave it to Babel
+        "jsx": "preserve",
         "noUnusedLocals": true,
         "noUnusedParameters": false,
         "baseUrl": "src/",

@@ -7,6 +7,14 @@ module.exports = {
             test: /\.(ts|tsx)$/,
             use: [
                 {
+                    loader: require.resolve('babel-loader'),
+                    options: {
+                        presets: [
+                            '@emotion/babel-preset-css-prop',
+                        ],
+                    }
+                },
+                {
                     loader: require.resolve('ts-loader'),
                     options: {
                         // For guardian/types
