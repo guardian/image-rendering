@@ -1,11 +1,11 @@
 // ----- Imports ----- //
 
-import { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { remSpace } from '@guardian/src-foundations';
 import { from } from '@guardian/src-foundations/mq';
 import { Option, none } from '@guardian/types/option';
 import { Format } from '@guardian/types/Format';
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/core';
 
 import { Image } from 'image';
 import Img from 'components/img';

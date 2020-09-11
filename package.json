@@ -4,6 +4,7 @@
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
   "main": "index.ts",
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.35",
     "@guardian/src-foundations": "^2.3.0",
     "@guardian/types": "github:guardian/types#semver:^0.4.4",
@@ -13,7 +14,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@storybook/react": "^5.3.19",
+    "@babel/preset-env": "^7.11.5",
+    "@storybook/react": "^6.0.21",
     "@types/jest": "^26.0.13",
     "@types/node": "^14.10.0",
     "@types/react": "^16.9.49",
@@ -46,7 +48,28 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(@guardian/src-foundations|@guardian/types)/)"
     ],
-    "snapshotSerializers": ["jest-emotion"],
-    "testPathIgnorePatterns": ["dist"]
+    "snapshotSerializers": [
+      "jest-emotion"
+    ],
+    "testPathIgnorePatterns": [
+      "dist"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": {
+          "presets": [
+            [
+              "@babel/preset-env",
+              {
+                "targets": {
+                  "node": "10"
+                }
+              }
+            ],
+            "@emotion/babel-preset-css-prop"
+          ]
+        }
+      }
+    }
   }
 }

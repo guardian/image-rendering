@@ -1,12 +1,12 @@
 // ----- Imports ----- //
 
-import { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Format, Design } from '@guardian/types/Format';
 import { Option, OptionKind } from '@guardian/types/option';
 import { remSpace } from '@guardian/src-foundations';
 import { text, neutral } from '@guardian/src-foundations/palette';
 import { textSans } from '@guardian/src-foundations/typography';
-import { SerializedStyles, css, jsx } from '@emotion/core';
+import { SerializedStyles, css } from '@emotion/core';
 
 import { darkModeCss } from 'lib';
 import { fill } from 'editorialPalette';
