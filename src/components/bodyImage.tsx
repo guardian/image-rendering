@@ -5,18 +5,38 @@ import { remSpace } from '@guardian/src-foundations';
 import { from } from '@guardian/src-foundations/mq';
 import { Option, none } from '@guardian/types/option';
 import { Format } from '@guardian/types/Format';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 
-import { Image } from '../image';
+import { Image, Role } from '../image';
 import type { Lightbox } from '../lightbox';
 import Img from './img';
 import FigCaption from './figCaption';
+import { Sizes } from '../sizes';
 
 
 // ----- Setup ----- //
 
 const width = `calc(100vw - ${remSpace[4]})`;
 const phabletWidth = '620px';
+const thumbnailWidth = '8.75rem';
+
+
+// ----- Functions ----- //
+
+const getSizes = (role: Role): Sizes => {
+    switch (role) {
+        case Role.Thumbnail:
+            return {
+                mediaQueries: [],
+                default: thumbnailWidth,
+            };
+        default:
+            return {
+                mediaQueries: [{ breakpoint: 'phablet', size: phabletWidth }],
+                default: width,
+            };
+    }
+}
 
 
 // ----- Component ----- //
@@ -38,6 +58,21 @@ const styles = css`
     }
 `;
 
+const thumbnailStyles = css`
+    float: left;
+    width: ${thumbnailWidth};
+    margin: 0 ${remSpace[3]} 0 0;
+`;
+
+const getStyles = (role: Role): SerializedStyles => {
+    switch (role) {
+        case Role.Thumbnail:
+            return thumbnailStyles;
+        default:
+            return styles;
+    }
+}
+
 const BodyImage: FC<Props> = ({
     image,
     format,
@@ -45,13 +80,10 @@ const BodyImage: FC<Props> = ({
     lightbox,
     caption,
 }) =>
-    <figure css={styles}>
+    <figure css={getStyles(image.role)}>
         <Img
             image={image}
-            sizes={{
-                mediaQueries: [{ breakpoint: 'phablet', size: phabletWidth }],
-                default: width,
-            }}
+            sizes={getSizes(image.role)}
             className={none}
             format={format}
             supportsDarkMode={supportsDarkMode}
