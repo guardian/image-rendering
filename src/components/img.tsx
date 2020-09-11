@@ -2,13 +2,14 @@
 
 import React, { FC } from 'react';
 import { SerializedStyles, css } from '@emotion/core';
-import { Option, OptionKind, withDefault } from '@guardian/types/option';
+import { Option, withDefault } from '@guardian/types/option';
 import { Format, Design } from '@guardian/types/Format';
 import { neutral } from '@guardian/src-foundations/palette';
 
-import { Image, Role } from 'image';
-import { darkModeCss } from 'lib';
-import { Sizes, sizesAttribute, styles as sizeStyles } from 'sizes';
+import { Image, Role } from '../image';
+import { darkModeCss } from '../lib';
+import { Sizes, sizesAttribute, styles as sizeStyles } from '../sizes';
+import { Lightbox, getClassName, getCaption, getCredit } from '../lightbox';
 
 
 // ----- Functions ----- //
@@ -24,17 +25,6 @@ const backgroundColour = (format: Format): string => {
     }
 };
 
-const getLightboxClassName = (
-    imageWidth: number,
-    className: Option<string>,
-): string | undefined => {
-    if (imageWidth > 620 && className.kind === OptionKind.Some) {
-        return className.value;
-    }
-
-    return undefined;
-}
-
 
 // ----- Component ----- //
 
@@ -44,7 +34,7 @@ interface Props {
     className: Option<SerializedStyles>;
     format: Format;
     supportsDarkMode: boolean;
-    lightboxClassName: Option<string>;
+    lightbox: Option<Lightbox>;
 }
 
 const styles = (format: Format, supportsDarkMode: boolean): SerializedStyles => css`
@@ -77,7 +67,14 @@ const getStyles = (
     }   
 }
 
-const Img: FC<Props> = ({ image, sizes, className, format, supportsDarkMode, lightboxClassName }) =>
+const Img: FC<Props> = ({
+    image,
+    sizes,
+    className,
+    format,
+    supportsDarkMode,
+    lightbox,
+}) =>
     <picture>
         <source
             sizes={sizesAttribute(sizes)}
@@ -91,14 +88,14 @@ const Img: FC<Props> = ({ image, sizes, className, format, supportsDarkMode, lig
         <img
             src={image.src}
             alt={withDefault('')(image.alt)}
-            className={getLightboxClassName(image.width, lightboxClassName)}
+            className={getClassName(image.width, lightbox)}
             css={[
                 getStyles(image, format, supportsDarkMode, sizes),
                 withDefault<SerializedStyles | undefined>(undefined)(className),
             ]}
             data-ratio={image.height / image.width}
-            data-caption={withDefault<string | undefined>(undefined)(image.rawCaptionHtml)}
-            data-credit={withDefault<string | undefined>(undefined)(image.credit)}
+            data-caption={getCaption(lightbox)}
+            data-credit={getCredit(lightbox)}
         />
     </picture>
 

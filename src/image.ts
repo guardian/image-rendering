@@ -18,9 +18,6 @@ interface Image {
     alt: Option<string>;
     width: number;
     height: number;
-    caption: Option<DocumentFragment>;
-    credit: Option<string>;
-    rawCaptionHtml: Option<string>;
     role: Role;
 }
 

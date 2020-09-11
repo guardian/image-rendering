@@ -8,8 +8,8 @@ import { text, neutral } from '@guardian/src-foundations/palette';
 import { textSans } from '@guardian/src-foundations/typography';
 import { SerializedStyles, css } from '@emotion/core';
 
-import { darkModeCss } from 'lib';
-import { fill } from 'editorialPalette';
+import { darkModeCss } from '../lib';
+import { fill } from '../editorialPalette';
 
 
 // ----- Sub-Components ----- //
