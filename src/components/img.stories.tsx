@@ -5,7 +5,7 @@ import { none } from '@guardian/types/option';
 import { Design, Display, Pillar } from '@guardian/types/Format';
 
 import Img from './img';
-import { image } from 'fixtures/image';
+import { image } from '../fixtures/image';
 
 
 // ----- Setup ----- //
@@ -26,7 +26,7 @@ const Default: FC = () =>
             pillar: Pillar.News,
         }}
         supportsDarkMode={true}
-        lightboxClassName={none}
+        lightbox={none}
     />
 
 const Placeholder: FC = () =>
@@ -45,7 +45,7 @@ const Placeholder: FC = () =>
             pillar: Pillar.News,
         }}
         supportsDarkMode={true}
-        lightboxClassName={none}
+        lightbox={none}
     />
 
 

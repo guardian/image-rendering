@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { none, some } from '@guardian/types/option';
 import { Display, Design, Pillar } from '@guardian/types/Format';
 
-import { image } from 'fixtures/image';
+import { image } from '../fixtures/image';
 import BodyImage from './bodyImage';
 
 
@@ -19,7 +19,7 @@ const Default: FC = () =>
             pillar: Pillar.News,
         }}
         supportsDarkMode={true}
-        lightboxClassName={none}
+        lightbox={none}
         caption={some('Age of the train … a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images')}
     />
 
@@ -32,7 +32,7 @@ const NoCaption: FC = () =>
             pillar: Pillar.News,
         }}
         supportsDarkMode={true}
-        lightboxClassName={none}
+        lightbox={none}
         caption={none}
     />
 

@@ -7,9 +7,10 @@ import { Option, none } from '@guardian/types/option';
 import { Format } from '@guardian/types/Format';
 import { css } from '@emotion/core';
 
-import { Image } from 'image';
-import Img from 'components/img';
-import FigCaption from 'components/figCaption';
+import { Image } from '../image';
+import type { Lightbox } from '../lightbox';
+import Img from './img';
+import FigCaption from './figCaption';
 
 
 // ----- Setup ----- //
@@ -24,7 +25,7 @@ interface Props {
     image: Image;
     format: Format;
     supportsDarkMode: boolean;
-    lightboxClassName: Option<string>;
+    lightbox: Option<Lightbox>;
     caption: Option<ReactNode>;
 }
 
@@ -41,7 +42,7 @@ const BodyImage: FC<Props> = ({
     image,
     format,
     supportsDarkMode,
-    lightboxClassName,
+    lightbox,
     caption,
 }) =>
     <figure css={styles}>
@@ -54,7 +55,7 @@ const BodyImage: FC<Props> = ({
             className={none}
             format={format}
             supportsDarkMode={supportsDarkMode}
-            lightboxClassName={lightboxClassName}
+            lightbox={lightbox}
         />
         <FigCaption format={format} supportsDarkMode={supportsDarkMode}>
             {caption}

@@ -1,6 +1,6 @@
 // ----- Imports ----- //
 
-import { none, some } from '@guardian/types/option';
+import { some } from '@guardian/types/option';
 
 import { Role, Image } from 'image';
 
@@ -14,9 +14,6 @@ const image: Image = {
     alt: some('Demo image'),
     width: 5644,
     height: 3387,
-    caption: none,
-    credit: none,
-    rawCaptionHtml: none,
     role: Role.Standard,
 };
 
