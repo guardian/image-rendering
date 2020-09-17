@@ -6,7 +6,7 @@ import { Option, withDefault } from '@guardian/types/option';
 import { Format, Design } from '@guardian/types/Format';
 import { neutral } from '@guardian/src-foundations/palette';
 
-import { Image, Role } from '../image';
+import { Image } from '../image';
 import { darkModeCss } from '../lib';
 import { Sizes, sizesAttribute, styles as sizeStyles } from '../sizes';
 import { Lightbox, getClassName, getCaption, getCredit } from '../lightbox';
@@ -47,26 +47,6 @@ const styles = (format: Format, supportsDarkMode: boolean): SerializedStyles => 
     `}
 `;
 
-const thumbnailStyles = css`
-    color: ${neutral[60]};
-`;
-
-const getStyles = (
-    image: Image,
-    format: Format,
-    supportsDarkMode: boolean,
-    sizes: Sizes,
-): SerializedStyles => {
-    const dimensions = sizeStyles(sizes, image.width, image.height);
-
-    switch (image.role) {
-        case Role.Thumbnail:
-            return css(dimensions, thumbnailStyles);
-        default:
-            return css(dimensions, styles(format, supportsDarkMode));
-    }   
-}
-
 const Img: FC<Props> = ({
     image,
     sizes,
@@ -90,7 +70,8 @@ const Img: FC<Props> = ({
             alt={withDefault('')(image.alt)}
             className={getClassName(image.width, lightbox)}
             css={[
-                getStyles(image, format, supportsDarkMode, sizes),
+                sizeStyles(sizes, image.width, image.height),
+                styles(format, supportsDarkMode),
                 withDefault<SerializedStyles | undefined>(undefined)(className),
             ]}
             data-ratio={image.height / image.width}
