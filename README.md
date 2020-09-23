@@ -48,5 +48,5 @@ Lowest-level implementation of a responsive image.
 You can get storybook to run locally by running:
 
 ```
-yarn storybook
+npm run storybook
 ```
