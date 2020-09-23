@@ -13,7 +13,7 @@ This used for images in the body of articles.
     image={Image}
     format={Format}
     supportsDarkMode={boolean}
-    lightboxClassName={Option<string>}
+    lightbox={Option<Lightbox>}
     caption={Option<ReactNode>}
 />
 ```
@@ -39,7 +39,7 @@ Lowest-level implementation of a responsive image.
     className={Option<SerializedStyles>}
     format={Format}
     supportsDarkMode={boolean}
-    lightboxClassName={Option<string>}
+    lightbox={Option<Lightbox>}
 />
 ```
 
