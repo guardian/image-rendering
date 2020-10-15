@@ -23,7 +23,7 @@
     "babel-loader": "^8.1.0",
     "jest": "^26.5.3",
     "jest-emotion": "^10.0.32",
-    "react-test-renderer": "^16.13.1",
+    "react-test-renderer": "^16.14.0",
     "ts-jest": "^26.4.1",
     "ts-loader": "^8.0.5"
   },
