@@ -2,8 +2,8 @@
 
 import React, { FC, ReactNode } from 'react';
 import { remSpace } from '@guardian/src-foundations';
-import { from } from '@guardian/src-foundations/mq';
-import { Option, none } from '@guardian/types/option';
+import { Breakpoint, from } from '@guardian/src-foundations/mq';
+import { Option, none, withDefault } from '@guardian/types/option';
 import { Format } from '@guardian/types/Format';
 import { css, SerializedStyles } from '@emotion/core';
 
@@ -47,6 +47,7 @@ interface Props {
     supportsDarkMode: boolean;
     lightbox: Option<Lightbox>;
     caption: Option<ReactNode>;
+    leftColumnBreakpoint: Option<Breakpoint>;
 }
 
 const styles = css`
@@ -58,16 +59,22 @@ const styles = css`
     }
 `;
 
-const thumbnailStyles = css`
+const thumbnailStyles = (leftColumnBreakpoint: Breakpoint) => css`
     float: left;
     width: ${thumbnailWidth};
     margin: 0 ${remSpace[3]} 0 0;
+    border-radius: 100%;
+
+    ${from[leftColumnBreakpoint]} {
+        position: absolute;
+        transform: translateX(calc(-100% - ${remSpace[4]}));
+    }
 `;
 
-const getStyles = (role: Role): SerializedStyles => {
+const getStyles = (role: Role, leftColumnBreakpoint: Option<Breakpoint>): SerializedStyles => {
     switch (role) {
         case Role.Thumbnail:
-            return thumbnailStyles;
+            return thumbnailStyles(withDefault<Breakpoint>('leftCol')(leftColumnBreakpoint));
         default:
             return styles;
     }
@@ -79,8 +86,9 @@ const BodyImage: FC<Props> = ({
     supportsDarkMode,
     lightbox,
     caption,
+    leftColumnBreakpoint,
 }) =>
-    <figure css={getStyles(image.role)}>
+    <figure css={getStyles(image.role, leftColumnBreakpoint)}>
         <Img
             image={image}
             sizes={getSizes(image.role)}
