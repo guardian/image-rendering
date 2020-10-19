@@ -28,7 +28,7 @@ const backgroundColour = (format: Format): string => {
 
 // ----- Component ----- //
 
-interface Props {
+type Props = {
     image: Image;
     sizes: Sizes;
     className: Option<SerializedStyles>;
