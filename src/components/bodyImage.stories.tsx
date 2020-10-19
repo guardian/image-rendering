@@ -34,6 +34,7 @@ const Default: FC = () =>
         supportsDarkMode={true}
         lightbox={none}
         caption={caption}
+        leftColumnBreakpoint={none}
     />
 
 const NoCaption: FC = () =>
@@ -43,6 +44,7 @@ const NoCaption: FC = () =>
         supportsDarkMode={true}
         lightbox={none}
         caption={none}
+        leftColumnBreakpoint={none}
     />
 
 const Thumbnail: FC = () =>
@@ -56,6 +58,7 @@ const Thumbnail: FC = () =>
             supportsDarkMode={true}
             lightbox={none}
             caption={caption}
+            leftColumnBreakpoint={none}
         />
         {copy}
     </>
@@ -71,6 +74,7 @@ const ThumbnailNoCaption: FC = () =>
             supportsDarkMode={true}
             lightbox={none}
             caption={none}
+            leftColumnBreakpoint={none}
         />
         {copy}
     </>
