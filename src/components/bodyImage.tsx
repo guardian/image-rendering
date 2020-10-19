@@ -12,6 +12,7 @@ import type { Lightbox } from '../lightbox';
 import Img from './img';
 import FigCaption from './figCaption';
 import { Sizes } from '../sizes';
+import { darkModeCss } from 'lib';
 
 
 // ----- Setup ----- //
@@ -70,10 +71,16 @@ const thumbnailStyles = (leftColumnBreakpoint: Breakpoint): SerializedStyles => 
     }
 `;
 
-const imgStyles = (role: Role): Option<SerializedStyles> => {
+const imgStyles = (role: Role, supportsDarkMode: boolean): Option<SerializedStyles> => {
     switch (role) {
         case Role.Thumbnail:
-            return some(css`border-radius: 100%;`);
+            return some(css`
+                background-color: transparent;
+
+                ${darkModeCss(supportsDarkMode)`
+                    background-color: transparent;
+                `}
+            `);
         default:
             return none;
     }
@@ -100,7 +107,7 @@ const BodyImage: FC<Props> = ({
         <Img
             image={image}
             sizes={getSizes(image.role)}
-            className={imgStyles(image.role)}
+            className={imgStyles(image.role, supportsDarkMode)}
             format={format}
             supportsDarkMode={supportsDarkMode}
             lightbox={lightbox}
