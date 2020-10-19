@@ -28,6 +28,7 @@
     "ts-loader": "^8.0.6"
   },
   "scripts": {
+    "preinstall": "if [[ $npm_execpath =~ 'yarn' ]]; then echo 'Use NPM!' && exit 1; fi",
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
