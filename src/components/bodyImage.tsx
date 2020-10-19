@@ -12,7 +12,7 @@ import type { Lightbox } from '../lightbox';
 import Img from './img';
 import FigCaption from './figCaption';
 import { Sizes } from '../sizes';
-import { darkModeCss } from 'lib';
+import { darkModeCss } from '../lib';
 
 
 // ----- Setup ----- //
