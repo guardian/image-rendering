@@ -6,7 +6,7 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.35",
-    "@guardian/src-foundations": "^2.4.0",
+    "@guardian/src-foundations": "^2.5.0",
     "@guardian/types": "github:guardian/types#semver:^0.4.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
