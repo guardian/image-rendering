@@ -1,8 +1,8 @@
 {
   "name": "@guardian/image-rendering",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.35",
