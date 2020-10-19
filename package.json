@@ -2,10 +2,8 @@
   "name": "@guardian/image-rendering",
   "version": "1.1.0",
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
-  "main": "src/index.ts",
-  "files": ["dist/**/*"],
+  "main": "dist/index.js",
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.35",
     "@guardian/src-foundations": "^2.5.0",
     "@guardian/types": "github:guardian/types#semver:^0.4.5",
@@ -14,8 +12,11 @@
     "typescript": "^4.0.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@storybook/react": "^6.0.26",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.10",
@@ -29,7 +30,7 @@
     "ts-loader": "^8.0.5"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --outDir tmp && babel tmp --out-dir dist --copy-files && rm -rf tmp",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 8181 --ci",
