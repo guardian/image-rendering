@@ -42,7 +42,7 @@ const getSizes = (role: Role): Sizes => {
 
 // ----- Component ----- //
 
-interface Props {
+type Props = {
     image: Image;
     format: Format;
     supportsDarkMode: boolean;
