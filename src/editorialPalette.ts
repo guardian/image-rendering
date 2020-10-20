@@ -7,8 +7,13 @@ import {
     sport,
     culture,
     lifestyle,
+    specialReport,
 } from '@guardian/src-foundations/palette';
 
+// TODO remove and use @guardian/types/Format instead
+const enum Special {
+    SpecialReport = 5,
+}
 
 // ----- Types ----- //
 
@@ -18,7 +23,7 @@ type Colour = string;
 // ----- Functions ----- //
 
 const fillIconPrimary = (format: Format): Colour => {
-    switch (format.pillar) {
+    switch (format.theme) {
         case Pillar.Opinion:
             return opinion[400];
         case Pillar.Sport:
@@ -27,6 +32,8 @@ const fillIconPrimary = (format: Format): Colour => {
             return culture[400];
         case Pillar.Lifestyle:
             return lifestyle[400];
+        case 5: // TODO: use Special.SpecialReport
+            return specialReport[500];
         case Pillar.News:
         default:
             return news[400];
@@ -34,7 +41,7 @@ const fillIconPrimary = (format: Format): Colour => {
 }
 
 const fillIconPrimaryInverse = (format: Format): Colour => {
-    switch (format.pillar) {
+    switch (format.theme) {
         case Pillar.Opinion:
             return opinion[500];
         case Pillar.Sport:
@@ -43,6 +50,8 @@ const fillIconPrimaryInverse = (format: Format): Colour => {
             return culture[500];
         case Pillar.Lifestyle:
             return lifestyle[500];
+        case 5: // TODO: use Special.SpecialReport
+            return specialReport[500];
         case Pillar.News:
         default:
             return news[500];
