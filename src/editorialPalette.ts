@@ -10,11 +10,6 @@ import {
     specialReport,
 } from '@guardian/src-foundations/palette';
 
-// TODO remove and use @guardian/types/Format instead
-const enum Special {
-    SpecialReport = 5,
-}
-
 // ----- Types ----- //
 
 type Colour = string;
