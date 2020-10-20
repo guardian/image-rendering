@@ -30,7 +30,7 @@
     "ts-loader": "^8.0.6"
   },
   "scripts": {
-    "build": "tsc --outDir tmp && babel tmp --out-dir dist --copy-files && rm -rf tmp",
+    "build": "tsc --outDir tmp && babel tmp --config-file ./config/babel.config.json --out-dir dist --copy-files && rm -rf tmp",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 8181 --ci",
