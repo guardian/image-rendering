@@ -1,6 +1,6 @@
 // ----- Imports ----- //
 
-import { Format, Pillar } from '@guardian/types/Format';
+import { Special, Format, Pillar } from '@guardian/types/Format';
 import {
     news,
     opinion,
@@ -27,7 +27,7 @@ const fillIconPrimary = (format: Format): Colour => {
             return culture[400];
         case Pillar.Lifestyle:
             return lifestyle[400];
-        case 5: // TODO: use Special.SpecialReport
+        case Special.SpecialReport:
             return specialReport[500];
         case Pillar.News:
         default:
@@ -45,7 +45,7 @@ const fillIconPrimaryInverse = (format: Format): Colour => {
             return culture[500];
         case Pillar.Lifestyle:
             return lifestyle[500];
-        case 5: // TODO: use Special.SpecialReport
+        case Special.SpecialReport:
             return specialReport[500];
         case Pillar.News:
         default:
