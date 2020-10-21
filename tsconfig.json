@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es2019",
+        "target": "ES2020",
         // Enable strictest settings like strictNullChecks & noImplicitAny.
         "strict": true,
         // Import non-ES modules as default imports.
@@ -15,5 +15,7 @@
         "forceConsistentCasingInFileNames": true,
         "outDir": "dist/",
         "allowJs": true,
+        // Also emit declaration files
+        "declaration": true,
     }
 }
