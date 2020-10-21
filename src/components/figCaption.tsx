@@ -49,7 +49,7 @@ const Triangle: FC<TriangleProps> = ({ format, supportsDarkMode }) => {
 
 // ----- Component ----- //
 
-interface Props {
+type Props = {
     format: Format;
     supportsDarkMode: boolean;
     children: Option<ReactNode>;
