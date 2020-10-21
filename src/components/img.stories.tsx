@@ -23,7 +23,7 @@ const Default: FC = () =>
         format={{
             design: Design.Article,
             display: Display.Standard,
-            pillar: Pillar.News,
+            theme: Pillar.News,
         }}
         supportsDarkMode={true}
         lightbox={none}
@@ -42,7 +42,7 @@ const Placeholder: FC = () =>
         format={{
             design: Design.Article,
             display: Display.Standard,
-            pillar: Pillar.News,
+            theme: Pillar.News,
         }}
         supportsDarkMode={true}
         lightbox={none}

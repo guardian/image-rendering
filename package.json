@@ -1,12 +1,12 @@
 {
   "name": "@guardian/image-rendering",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
   "main": "dist/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@guardian/src-foundations": "^2.5.0",
-    "@guardian/types": "github:guardian/types#semver:^0.4.5",
+    "@guardian/types": "github:guardian/types#semver:^0.5.2",
     "react": "^17.0.0",
     "react-dom": "^16.14.0",
     "typescript": "^4.0.3"
@@ -30,6 +30,7 @@
     "ts-loader": "^8.0.6"
   },
   "scripts": {
+    "preinstall": "if [[ $npm_execpath =~ 'yarn' ]]; then echo 'Use NPM!' && exit 1; fi",
     "build": "npm run build:tsc && npm run build:babel && npm run build:cleanup",
     "build:tsc": "tsc --outDir tmp",
     "build:babel": "babel tmp --config-file ./config/babel.config.json --out-dir dist --copy-files",

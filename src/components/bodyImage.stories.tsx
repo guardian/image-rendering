@@ -14,7 +14,7 @@ import { Role } from '../image';
 const format = {
     design: Design.Article,
     display: Display.Standard,
-    pillar: Pillar.News,
+    theme: Pillar.News,
 };
 const caption = some('Age of the train … a tourist train in Switzerland. Photograph: Kisa_Markiza/Getty Images');
 const copy = (
