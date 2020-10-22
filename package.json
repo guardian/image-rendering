@@ -1,6 +1,6 @@
 {
   "name": "@guardian/image-rendering",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
   "main": "dist/index.js",
   "dependencies": {
