@@ -17,7 +17,7 @@ import { darkModeCss } from '../lib';
 
 // ----- Setup ----- //
 
-const width = `calc(100vw - ${remSpace[4]})`;
+const width = '100%';
 const phabletWidth = '620px';
 const thumbnailWidth = '8.75rem';
 
