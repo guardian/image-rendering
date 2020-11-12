@@ -27,7 +27,7 @@
     "jest-emotion": "^10.0.32",
     "react-test-renderer": "^16.14.0",
     "ts-jest": "^26.4.4",
-    "ts-loader": "^8.0.7"
+    "ts-loader": "^8.0.11"
   },
   "scripts": {
     "preinstall": "[ -z \"$CI\" ] || if [[ $npm_execpath =~ 'yarn' ]]; then echo 'Use NPM!' && exit 1; fi",
