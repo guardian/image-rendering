@@ -7,6 +7,6 @@ export type { Sizes } from "./sizes";
 
 // ----- Components ----- //
 
-export { default as BodyImage } from "./components/bodyImage";
-export { default as FigCaption } from "./components/figCaption";
-export { default as Img } from "./components/img";
+export { BodyImage } from "./components/bodyImage";
+export { FigCaption } from "./components/figCaption";
+export { Img } from "./components/img";
