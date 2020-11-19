@@ -49,6 +49,7 @@
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest",
     "tsc": "tsc",
+    "validate": "npm run lint && npm run test && npm run tsc",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 8181 --ci",
     "build-storybook": "node --max-old-space-size=4096 $(yarn bin)/build-storybook",
