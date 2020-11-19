@@ -36,6 +36,7 @@
     "build:tsc": "tsc --outDir tmp",
     "build:babel": "babel tmp --config-file ./config/babel.config.json --out-dir dist --copy-files",
     "build:cleanup": "rm -rf tmp",
+    "lint": "eslint . --ext .ts,.tsx",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 8181 --ci",
