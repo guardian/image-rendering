@@ -1,10 +1,12 @@
+/* eslint-disable import/no-default-export -- exclude stories for this rule */
+
 // ----- Imports ----- //
 
 import { Design, Display, Pillar } from "@guardian/types/Format";
 import { some } from "@guardian/types/option";
 import type { FC } from "react";
 import React from "react";
-import FigCaption from "./figCaption";
+import { FigCaption } from "./figCaption";
 
 // ----- Stories ----- //
 

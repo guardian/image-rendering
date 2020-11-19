@@ -1,6 +1,7 @@
 /** @jsx jsx */
 // ----- Imports ----- //
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- jest will fail without this
 import { jsx } from "@emotion/core";
 import { breakpoints } from "@guardian/src-foundations/mq";
 import { matchers } from "jest-emotion";

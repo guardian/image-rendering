@@ -1,3 +1,6 @@
 {
-    "extends": "@guardian/eslint-config-typescript"
+    "extends": "@guardian/eslint-config-typescript",
+    "ignorePatterns": [
+        "/dist"
+    ]
 }

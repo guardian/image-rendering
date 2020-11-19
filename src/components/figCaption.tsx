@@ -78,7 +78,11 @@ const getStyles = (format: Format): SerializedStyles => {
   }
 };
 
-const FigCaption: FC<Props> = ({ format, supportsDarkMode, children }) => {
+export const FigCaption: FC<Props> = ({
+  format,
+  supportsDarkMode,
+  children,
+}) => {
   switch (children.kind) {
     case OptionKind.Some:
       return (
@@ -92,7 +96,3 @@ const FigCaption: FC<Props> = ({ format, supportsDarkMode, children }) => {
       return null;
   }
 };
-
-// ----- Exports ----- //
-
-export default FigCaption;

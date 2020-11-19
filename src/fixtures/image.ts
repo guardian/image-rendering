@@ -1,8 +1,8 @@
 // ----- Imports ----- //
 
 import { some } from "@guardian/types/option";
-import type { Image } from "image";
-import { Role } from "image";
+import type { Image } from "../image";
+import { Role } from "../image";
 
 // ----- Fixtures ----- //
 

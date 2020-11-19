@@ -1,3 +1,5 @@
+/* eslint-disable import/no-default-export -- exclude stories for this rule */
+
 // ----- Imports ----- //
 
 import { Design, Display, Pillar } from "@guardian/types/Format";
@@ -5,7 +7,7 @@ import { none } from "@guardian/types/option";
 import type { FC } from "react";
 import React from "react";
 import { image } from "../fixtures/image";
-import Img from "./img";
+import { Img } from "./img";
 
 // ----- Setup ----- //
 
