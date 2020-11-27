@@ -1,30 +1,25 @@
 // ----- Imports ----- //
 
-import { Option } from '@guardian/types/option';
-
+import type { Option } from "@guardian/types/option";
 
 // ----- Types ----- //
 
 const enum Role {
-    Standard,
-    Thumbnail,
-    HalfWidth,
+  Standard,
+  Thumbnail,
+  HalfWidth,
 }
 
 interface Image {
-    src: string;
-    srcset: string;
-    dpr2Srcset: string;
-    alt: Option<string>;
-    width: number;
-    height: number;
-    role: Role;
+  src: string;
+  srcset: string;
+  dpr2Srcset: string;
+  alt: Option<string>;
+  width: number;
+  height: number;
+  role: Role;
 }
-
 
 // ----- Exports ----- //
 
-export {
-    Image,
-    Role,
-};
+export { Image, Role };

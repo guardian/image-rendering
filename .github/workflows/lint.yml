@@ -1,0 +1,20 @@
+name: lint 🔎
+on: [push]
+
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: '12.x'
+
+            # Cache npm dependencies using https://github.com/bahmutov/npm-install
+            - uses: bahmutov/npm-install@v1
+
+            - name: Install
+              run: npm install
+
+            - name: Lint
+              run: npm run lint
