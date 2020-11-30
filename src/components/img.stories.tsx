@@ -2,8 +2,7 @@
 
 // ----- Imports ----- //
 
-import { Design, Display, Pillar } from "@guardian/types/Format";
-import { none } from "@guardian/types/option";
+import { Design, Display, none, Pillar } from "@guardian/types";
 import type { FC } from "react";
 import React from "react";
 import { image } from "../fixtures/image";

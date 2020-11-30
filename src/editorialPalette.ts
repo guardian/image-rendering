@@ -8,8 +8,8 @@ import {
   specialReport,
   sport,
 } from "@guardian/src-foundations/palette";
-import type { Format } from "@guardian/types/Format";
-import { Pillar, Special } from "@guardian/types/Format";
+import type { Format } from "@guardian/types";
+import { Pillar, Special } from "@guardian/types";
 
 // ----- Types ----- //
 
