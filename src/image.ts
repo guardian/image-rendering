@@ -1,6 +1,6 @@
 // ----- Imports ----- //
 
-import type { Option } from "@guardian/types/option";
+import type { Option } from "@guardian/types";
 
 // ----- Types ----- //
 

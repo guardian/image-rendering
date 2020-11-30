@@ -1,6 +1,6 @@
 // ----- Imports ----- //
 
-import { some } from "@guardian/types/option";
+import { some } from "@guardian/types";
 import type { Image } from "../image";
 import { Role } from "../image";
 

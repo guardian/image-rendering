@@ -3,10 +3,8 @@
 import type { SerializedStyles } from "@emotion/core";
 import { css } from "@emotion/core";
 import { neutral } from "@guardian/src-foundations/palette";
-import type { Format } from "@guardian/types/Format";
-import { Design } from "@guardian/types/Format";
-import type { Option } from "@guardian/types/option";
-import { withDefault } from "@guardian/types/option";
+import type { Format, Option } from "@guardian/types";
+import { Design, withDefault } from "@guardian/types";
 import React from "react";
 import type { FC } from "react";
 import type { Image } from "../image";

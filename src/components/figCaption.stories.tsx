@@ -2,8 +2,7 @@
 
 // ----- Imports ----- //
 
-import { Design, Display, Pillar } from "@guardian/types/Format";
-import { some } from "@guardian/types/option";
+import { Design, Display, Pillar, some } from "@guardian/types";
 import type { FC } from "react";
 import React from "react";
 import { FigCaption } from "./figCaption";
