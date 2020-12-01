@@ -9,7 +9,7 @@
     "@guardian/types": "github:guardian/types#semver:^1.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
