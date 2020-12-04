@@ -54,6 +54,9 @@ const Placeholder: FC = () => (
 export default {
   component: Img,
   title: "Img",
+  parameters: {
+    chromatic: { diffThreshold: 0.2 },
+  },
 };
 
 export { Default, Placeholder };
