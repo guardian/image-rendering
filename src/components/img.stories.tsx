@@ -55,7 +55,7 @@ export default {
   component: Img,
   title: "Img",
   parameters: {
-    chromatic: { diffThreshold: 0.2 },
+    chromatic: { diffThreshold: 0.25 },
   },
 };
 
