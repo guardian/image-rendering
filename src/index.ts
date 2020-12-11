@@ -1,7 +1,6 @@
 // ----- Types ----- //
 
 export type { Image } from "./image";
-export { Role } from "./image";
 export type { Lightbox } from "./lightbox";
 export type { Sizes } from "./sizes";
 export type { Srcsets } from "./srcsets";

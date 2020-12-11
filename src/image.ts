@@ -1,14 +1,8 @@
 // ----- Imports ----- //
 
-import type { Option } from "@guardian/types";
+import type { Option, Role } from "@guardian/types";
 
 // ----- Types ----- //
-
-const enum Role {
-  Standard,
-  Thumbnail,
-  HalfWidth,
-}
 
 interface Image {
   src: string;
@@ -22,4 +16,4 @@ interface Image {
 
 // ----- Exports ----- //
 
-export { Image, Role };
+export type { Image };
