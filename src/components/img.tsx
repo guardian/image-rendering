@@ -1,11 +1,10 @@
 // ----- Imports ----- //
 
-import type { SerializedStyles } from "@emotion/core";
-import { css } from "@emotion/core";
+import type { SerializedStyles } from "@emotion/react";
+import { css } from "@emotion/react";
 import { neutral } from "@guardian/src-foundations/palette";
 import type { Format, Option } from "@guardian/types";
 import { Design, withDefault } from "@guardian/types";
-import React from "react";
 import type { FC } from "react";
 import type { Image } from "../image";
 import { darkModeCss } from "../lib";

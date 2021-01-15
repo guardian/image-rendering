@@ -9,9 +9,7 @@ module.exports = {
                 {
                     loader: require.resolve('babel-loader'),
                     options: {
-                        presets: [
-                            '@emotion/babel-preset-css-prop',
-                        ],
+                        configFile: path.resolve(__dirname, '../config/babel.config.json')
                     }
                 },
                 {

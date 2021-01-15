@@ -17,5 +17,8 @@
         "allowJs": true,
         // Also emit declaration files
         "declaration": true,
+        // Allows TypeScript to understand the `css` prop from Emotion
+        // https://emotion.sh/docs/typescript#css-prop
+        "jsxImportSource": "@emotion/react",
     }
 }
