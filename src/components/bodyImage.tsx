@@ -1,7 +1,7 @@
 // ----- Imports ----- //
 
-import type { SerializedStyles } from "@emotion/core";
-import { css } from "@emotion/core";
+import type { SerializedStyles } from "@emotion/react";
+import { css } from "@emotion/react";
 import { remSpace } from "@guardian/src-foundations";
 import type { Breakpoint } from "@guardian/src-foundations/mq";
 import { from } from "@guardian/src-foundations/mq";
