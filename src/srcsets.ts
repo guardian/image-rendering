@@ -8,7 +8,7 @@ import { fromUnsafe, ResultKind } from "@guardian/types";
 
 const imageResizer = "https://i.guim.co.uk/img";
 
-const defaultWidths = [140, 500, 1000, 1500, 2000];
+const defaultWidths = [140, 500, 1000, 1500, 2000, 2500, 3000];
 
 // Percentage.
 const defaultQuality = 85;
