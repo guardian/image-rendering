@@ -6,7 +6,7 @@
   "dependencies": {
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/react": "^11.1.4",
-    "@guardian/src-foundations": "^3.0.1",
+    "@guardian/src-foundations": "^3.1.0",
     "@guardian/types": "github:guardian/types#semver:^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
