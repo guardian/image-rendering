@@ -1,13 +1,13 @@
 {
   "name": "@guardian/image-rendering",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "description": "Handles parsing images from CAPI and rendering them in the *-rendering projects",
   "main": "dist/index.js",
   "dependencies": {
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/react": "^11.1.4",
     "@guardian/src-foundations": "^3.1.0",
-    "@guardian/types": "github:guardian/types#semver:^3.0.0",
+    "@guardian/types": "github:guardian/types#semver:^4.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typescript": "^4.1.3"
