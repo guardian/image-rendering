@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.1.1",
     "@guardian/src-foundations": "^2.7.1",
+    "@guardian/types": "github:guardian/types#semver:1.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "typescript": "^4.1.3"
@@ -38,9 +39,6 @@
     "react-test-renderer": "^16.14.0",
     "ts-jest": "^26.4.4",
     "ts-loader": "^8.0.14"
-  },
-  "peerDependencies": {
-    "@guardian/types": "github:guardian/types#semver:1.1.0"
   },
   "scripts": {
     "preinstall": "[ -z \"$CI\" ] || if [[ $npm_execpath =~ 'yarn' ]]; then echo 'Use NPM!' && exit 1; fi",
