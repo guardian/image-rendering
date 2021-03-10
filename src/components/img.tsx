@@ -20,7 +20,6 @@ const backgroundColour = (format: Format): string => {
     case Design.Media:
       return neutral[20];
     case Design.Comment:
-    case Design.Letter:
       return neutral[86];
     default:
       return neutral[97];
