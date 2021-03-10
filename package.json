@@ -40,9 +40,6 @@
     "ts-jest": "^26.4.4",
     "ts-loader": "^8.0.17"
   },
-  "peerDependencies": {
-    "@guardian/types": "1.x"
-  },
   "scripts": {
     "preinstall": "[ -z \"$CI\" ] || if [[ $npm_execpath =~ 'yarn' ]]; then echo 'Use NPM!' && exit 1; fi",
     "build": "npm run build:tsc && npm run build:babel && npm run build:cleanup",
