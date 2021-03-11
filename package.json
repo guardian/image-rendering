@@ -19,7 +19,7 @@
     "@babel/preset-react": "^7.12.13",
     "@emotion/jest": "^11.1.0",
     "@guardian/eslint-config-typescript": "^0.4.2",
-    "@guardian/prettier": "^0.4.2",
+    "@guardian/prettier": "^0.5.0",
     "@storybook/react": "^6.1.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
