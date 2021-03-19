@@ -78,7 +78,8 @@
       "@emotion/jest/serializer"
     ],
     "testPathIgnorePatterns": [
-      "dist"
+      "dist",
+      "tmp"
     ],
     "globals": {
       "ts-jest": {
