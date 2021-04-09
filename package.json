@@ -17,7 +17,7 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
-    "@emotion/jest": "^11.1.0",
+    "@emotion/jest": "^11.3.0",
     "@guardian/eslint-config-typescript": "^0.5.0",
     "@guardian/prettier": "^0.5.0",
     "@storybook/react": "^6.1.0",
