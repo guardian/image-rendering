@@ -4,7 +4,6 @@
 
 import { Design, Display, none, Pillar, Role, some } from "@guardian/types";
 import type { FC } from "react";
-import React from "react";
 import { image } from "../fixtures/image";
 import { BodyImage } from "./bodyImage";
 
