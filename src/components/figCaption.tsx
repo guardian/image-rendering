@@ -7,7 +7,6 @@ import { neutral, text } from "@guardian/src-foundations/palette";
 import { textSans } from "@guardian/src-foundations/typography";
 import type { Format, Option } from "@guardian/types";
 import { Design, OptionKind } from "@guardian/types";
-import React from "react";
 import type { FC, ReactNode } from "react";
 import { fill } from "../editorialPalette";
 import { darkModeCss } from "../lib";

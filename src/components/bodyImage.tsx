@@ -7,7 +7,6 @@ import type { Breakpoint } from "@guardian/src-foundations/mq";
 import { from } from "@guardian/src-foundations/mq";
 import type { Format, Option } from "@guardian/types";
 import { none, Role, some, withDefault } from "@guardian/types";
-import React from "react";
 import type { FC, ReactNode } from "react";
 import type { Image } from "../image";
 import { darkModeCss } from "../lib";
