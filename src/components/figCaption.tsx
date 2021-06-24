@@ -3,7 +3,7 @@
 import type { SerializedStyles } from "@emotion/react";
 import { css } from "@emotion/react";
 import { remSpace } from "@guardian/src-foundations";
-import { neutral, text } from "@guardian/src-foundations/palette";
+import { brandAltText, neutral, text } from "@guardian/src-foundations/palette";
 import { textSans } from "@guardian/src-foundations/typography";
 import type { Format, Option } from "@guardian/types";
 import { Design, OptionKind } from "@guardian/types";
@@ -56,22 +56,30 @@ type Props = {
   children: Option<ReactNode>;
 };
 
-const styles = css`
-  ${textSans.xsmall()}
+const styles = (supportsDarkMode: boolean) => css`
+  ${textSans.xxsmall({ lineHeight: 'regular' })}
   padding-top: ${remSpace[2]};
   color: ${text.supporting};
+
+  ${darkModeCss(supportsDarkMode)`
+    color: ${brandAltText.supporting};
+  `}
 `;
 
-const mediaStyles = css`
+const mediaStyles = (supportsDarkMode: boolean) => css`
   color: ${neutral[86]};
+
+  ${darkModeCss(supportsDarkMode)`
+    color: ${neutral[86]};
+  `}
 `;
 
-const getStyles = (format: Format): SerializedStyles => {
+const getStyles = (format: Format, supportsDarkMode: boolean): SerializedStyles => {
   switch (format.design) {
     case Design.Media:
-      return css(styles, mediaStyles);
+      return css(styles(supportsDarkMode), mediaStyles(supportsDarkMode));
     default:
-      return styles;
+      return styles(supportsDarkMode);
   }
 };
 
@@ -83,7 +91,7 @@ export const FigCaption: FC<Props> = ({
   switch (children.kind) {
     case OptionKind.Some:
       return (
-        <figcaption css={getStyles(format)}>
+        <figcaption css={getStyles(format, supportsDarkMode)}>
           <Triangle format={format} supportsDarkMode={supportsDarkMode} />
           {children.value}
         </figcaption>
