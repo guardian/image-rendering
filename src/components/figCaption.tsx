@@ -76,7 +76,7 @@ const mediaStyles = (supportsDarkMode: boolean) => css`
 
 const getStyles = (
   format: Format,
-  supportsDarkMode: boolean,
+  supportsDarkMode: boolean
 ): SerializedStyles => {
   switch (format.design) {
     case Design.Media:
