@@ -57,7 +57,7 @@ type Props = {
 };
 
 const styles = (supportsDarkMode: boolean) => css`
-  ${textSans.xxsmall({ lineHeight: 'regular' })}
+  ${textSans.xxsmall({ lineHeight: "regular" })}
   padding-top: ${remSpace[2]};
   color: ${text.supporting};
 
@@ -74,7 +74,10 @@ const mediaStyles = (supportsDarkMode: boolean) => css`
   `}
 `;
 
-const getStyles = (format: Format, supportsDarkMode: boolean): SerializedStyles => {
+const getStyles = (
+  format: Format,
+  supportsDarkMode: boolean,
+): SerializedStyles => {
   switch (format.design) {
     case Design.Media:
       return css(styles(supportsDarkMode), mediaStyles(supportsDarkMode));
