@@ -7,7 +7,7 @@
     "@emotion/babel-plugin": "^11.1.2",
     "@emotion/react": "^11.1.5",
     "@guardian/src-foundations": "^3.3.0",
-    "@guardian/types": "github:guardian/types#semver:^4.0.0",
+    "@guardian/types": "github:guardian/types#semver:^9.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typescript": "^4.3.4"
