@@ -1,5 +1,7 @@
 # image-rendering
 
+**⚠️ Deprecated ⚠️:** *This functionality has been migrated to the DCR/AR mono-repo: https://github.com/guardian/dotcom-rendering.*
+
 Handles parsing images from CAPI and rendering them in the `*-rendering` projects
 
 ## Components
