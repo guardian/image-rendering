@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "dependencies": {
     "@emotion/babel-plugin": "^11.1.2",
-    "@emotion/react": "^11.1.5",
+    "@emotion/react": "^11.4.1",
     "@guardian/src-foundations": "^3.3.0",
     "@guardian/types": "github:guardian/types#semver:^4.0.0",
     "react": "^17.0.1",
